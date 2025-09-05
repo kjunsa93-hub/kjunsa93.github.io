@@ -107,9 +107,10 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['나연'] = 'JYP엔터테인먼트 소속 9인조 그룹 TWICE의 멤버';
-            dic_class2information['장원영'] = '스타쉽엔터테인먼트 소속 6인조 걸그룹 IVE의 멤버.';
-            dic_class2information['제니'] = 'YG엔터테인먼트 소속 4인조 걸그룹 BLACKPINK의 메인래퍼이자 리드보컬';
+            dic_class2information['강혜원'] = '피스 엔터테인먼트 전 아이즈원의 멤버,현배우';
+            dic_class2information['김채원'] = '하이브 엔터인먼트 전 아이즈원, 르세라핌의 멤버.';
+            dic_class2information['김민주'] = '나무엔터테인먼트 전 아이즈원의 멤버';
+            dic_class2information['조유리'] = '스톤뮤직 엔터테인먼트 전 아이즈원의 멤버,현 솔로';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
